@@ -40,3 +40,20 @@ usuários podem expressar sua criatividade através da criação de imagens pixe
 - A paleta não contém cores repetidas;
 
 </details>
+
+## 3. Implementado um botão para gerar cores aleatórias para a paleta de cores.
+
+<details>
+  <summary>A página possui um botão que gera cores aleatórias ao ser clicado</summary><br />
+
+- O botão possui o `id` denominado `button-random-color`;
+
+- O botão possui o texto **Random Colors**;
+
+- A **primeira** cor sempre vai ser **preta**;
+
+- A **segunda** cor sempre vai ser **branca**;
+
+- As cores geradas na paleta são diferentes a cada click do botão;
+
+</details>
