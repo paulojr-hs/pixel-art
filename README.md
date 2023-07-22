@@ -23,3 +23,20 @@ usuários podem expressar sua criatividade através da criação de imagens pixe
 - O texto do título é **exatamente** "Color Palette";
 
 </details>
+
+## 2. Implementado uma paleta contendo cinco cores distintas.
+
+<details>
+  <summary>A página inicialmente contém uma paleta com cinco opções de cores</summary>
+
+- A paleta de cores é um elemento com `id` denominado `colors`, e cada cor individual tem a `classe` chamada `color`;
+
+- A cor de fundo de cada elemento da paleta é a cor que o elemento representa;
+
+- Cada elemento da paleta de cores tem uma borda preta, sólida e com 1 pixel de largura;
+
+- A paleta lista todas as cores disponíveis para utilização uma ao lado da outra, e está posicionada abaixo do título **Color Palette**;
+
+- A paleta não contém cores repetidas;
+
+</details>

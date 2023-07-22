@@ -18,3 +18,25 @@ main {
   color: white;
   text-align: center;
 }
+
+#color-palette {
+  display: flex;
+  width: 50vw;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+#colors {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.color {
+  width: 40px;
+  height: 40px;
+  border: solid 1px black;
+  cursor: pointer;
+}
