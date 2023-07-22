@@ -8,3 +8,18 @@ usuários podem expressar sua criatividade através da criação de imagens pixe
 ## Estrutura do Repositório
 
 - A pasta `src` contém todo o código;
+
+## Funcionalidades Implementadas
+
+## 1. Adicionado à página a sessão de Paletas de Cores.
+
+<details>
+  <summary>A página contém o uma sessão para manipular as cores</summary><br />
+
+- Foi criado uma `div` com o `id` denominado `color-palette`;
+
+- Foi criado um título `h2` com o `id` denominado `palette-title`;
+
+- O texto do título é **exatamente** "Color Palette";
+
+</details>
