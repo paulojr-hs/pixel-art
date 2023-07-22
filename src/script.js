@@ -30,9 +30,25 @@ function randomizeColors() {
   }
 }
 
+function customColor() {
+  const colorInput = document.getElementById('input-custom-color');
+  const palette = document.getElementById('colors');
+
+  function handleColorInput() {
+    const chosenColor = colorInput.value;
+    const newColor = document.createElement('div');
+    newColor.classList.add('color');
+    newColor.style.backgroundColor = chosenColor;
+    palette.appendChild(newColor);
+  }
+
+  colorInput.addEventListener('input', handleColorInput);
+}
+
 const buttonRandomColor = document.getElementById('button-random-color');
 buttonRandomColor.addEventListener('click', randomizeColors);
 
 window.addEventListener('load', () => {
   populateColorPalette();
+  customColor();
 });

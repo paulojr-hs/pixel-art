@@ -3,6 +3,10 @@ body {
   background-color: #242632;
 }
 
+body * {
+  box-sizing: border-box;
+}
+
 main {
   display: flex;
   width: 100vw;
@@ -41,14 +45,16 @@ main {
   cursor: pointer;
 }
 
-button {
+button, label {
   display: flex;
+  height: 29.5px;
   align-items: center;
   justify-content: center;
   padding: 5px;
   border: none;
   border-radius: 5px;
   margin: 10px;
+  background-color: #e9e9ed;
   box-shadow: none;
   color: black;
   cursor: pointer;
@@ -56,4 +62,11 @@ button {
   outline: none;
   text-align: center;
   text-transform: uppercase;
+}
+
+#input-custom-color {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  opacity: 0;
 }

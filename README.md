@@ -57,3 +57,18 @@ usuários podem expressar sua criatividade através da criação de imagens pixe
 - As cores geradas na paleta são diferentes a cada click do botão;
 
 </details>
+
+## 4. Implementado um input para inserir novas cores a paleta de cores.
+
+<details>
+  <summary>A página possui um seletor que permite inserir novas cores a paleta</summary><br />
+
+- O seletor é do tipo `input`, possui o `id` denominado `input-custom-color`;
+
+- O input possui o texto **Select New Color**;
+
+- Ao clicar no input, será exibida para o usuário uma janela para que ele escolha uma nova cor;
+
+- Não é possível adicionar cores repetidas;
+
+</details>
