@@ -72,3 +72,22 @@ usuários podem expressar sua criatividade através da criação de imagens pixe
 - Não é possível adicionar cores repetidas;
 
 </details>
+
+## 5. Adicionado à página um quadro contendo 25 pixels.
+
+<details>
+  <summary>A página contém um quadro de pixels 5x5</summary><br/>
+
+- O quadro de pixels tém 5 colunas e 5 linhas;
+
+- O quadro possui o `id` denominado `pixel-board`, e cada pixel individual dentro do quadro possui a `class` chamada `pixel`;
+
+- A cor inicial de cada pixel do quadro é **branca**;
+
+- Cada pixel possui a borda preta sólida de 1px de largura;
+
+- Cada pixel possui 40px de altura e 40px de largura, incluindo o seu conteúdo e excluindo a borda preta;
+
+- O quadro está posicionado abaixo da paleta de cores;
+
+</details>

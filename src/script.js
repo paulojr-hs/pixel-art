@@ -11,6 +11,22 @@ function populateColorPalette() {
   }
 }
 
+function populatePixelBoard(size) {
+  const board = document.getElementById('pixel-board');
+
+  board.innerHTML = '';
+  board.style.gridTemplateColumns = `repeat(${size}, 42px)`;
+  board.style.gridTemplateRows = `repeat(${size}, 42px)`;
+
+  for (let i = 0; i < size * size; i += 1) {
+    const pixel = document.createElement('div');
+    pixel.style.backgroundColor = 'white';
+    pixel.classList.add('pixel');
+    pixel.style.border = 'solid 1px black';
+    board.appendChild(pixel);
+  }
+}
+
 function generateRandomColor() {
   const characters = '0123456789ABCDEF';
   let color = '#';
@@ -51,4 +67,5 @@ buttonRandomColor.addEventListener('click', randomizeColors);
 window.addEventListener('load', () => {
   populateColorPalette();
   customColor();
+  populatePixelBoard(5);
 });
