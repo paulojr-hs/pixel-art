@@ -66,6 +66,19 @@ main {
   justify-content: center;
 }
 
+#board-size-input {
+  appearance: textfield;
+  cursor: text;
+}
+
+#error-message {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  color: red;
+  font-weight: bold;
+}
+
 #pixel-board {
   display: grid;
   margin: 40px;
@@ -77,7 +90,7 @@ main {
   cursor: pointer;
 }
 
-button, label {
+button, label, input {
   display: flex;
   height: 29.5px;
   align-items: center;

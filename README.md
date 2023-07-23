@@ -133,3 +133,24 @@ usuários podem expressar sua criatividade através da criação de imagens pixe
 - O texto do título é **exatamente** "Board Control";
 
 </details>
+
+## 9. Criado um input que permite definir um novo tamanho para o quadro de pixels.
+
+<details>
+  <summary>A página contém um input para definir o tamanho do quadro de pixels</summary></br>
+
+- O input tem o `id` denominado `board-size` e está dentro da `div` chamada `board-control`;
+
+- Ao ser passado um valor, o quadro é alterado para **N** pixels de largura e **N** pixels de altura, onde **N** é o número inserido no input. Ou seja, ao ser passado o numero **10** será formado um novo quadro 10x10;
+
+- O valor mínimo do quadro é 5x5 e o valor maximo é 50x50;
+
+- Se nenhum valor for passado ao input, uma mensagem de erro será exibida;
+
+- Se o valor passado não for um `number`, uma mensagem de erro será exibida;
+
+- Se um valor menor que 5 ou maior que 50 for passado, uma mensagem de erro será exibida;
+
+- Após o tamanho do quadro ser alterado, ele será gerado em branco;
+
+</details>

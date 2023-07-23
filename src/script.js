@@ -79,8 +79,32 @@ function customColor() {
   colorInput.addEventListener('input', handleColorInput);
 }
 
+function customBoardSize() {
+  const boardSizeInput = document.getElementById('board-size-input');
+  const inputValue = boardSizeInput.value.trim();
+
+  let boardSize = parseInt(inputValue, 10);
+
+  if (!inputValue || Number.isNaN(boardSize) || boardSize < 5 || boardSize > 50) {
+    const errorMessageElement = document.getElementById('error-message');
+    errorMessageElement.textContent = 'Valor inválido! O tamanho deve ser um número entre 5 e 50.';
+  } else {
+    const errorMessageElement = document.getElementById('error-message');
+    errorMessageElement.textContent = '';
+
+    boardSize = Math.min(Math.max(boardSize, 5), 50);
+    populatePixelBoard(boardSize);
+    boardSizeInput.value = '';
+  }
+}
+
 const buttonRandomColor = document.getElementById('button-random-color');
 buttonRandomColor.addEventListener('click', randomizeColors);
+
+const boardSizeInput = document.getElementById('board-size-input');
+boardSizeInput.addEventListener('keypress', (event) => {
+  if (event.key === 'Enter') customBoardSize();
+});
 
 window.addEventListener('load', () => {
   populateColorPalette();
