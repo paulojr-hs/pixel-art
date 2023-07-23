@@ -120,3 +120,16 @@ usuários podem expressar sua criatividade através da criação de imagens pixe
 - Somente o pixel que foi clicado deve tem sua cor alterada, sem influenciar na cor dos demais pixels.
 
 </details>
+
+## 8. Adicionado à página a sessão de Controle do Quadro.
+
+<details>
+  <summary>A página contém o uma sessão para manipular o quadro</summary><br />
+
+- Foi criado uma `div` com o `id` denominado `board-control`;
+
+- Foi criado um título `h2` com o `id` denominado `control-title`;
+
+- O texto do título é **exatamente** "Board Control";
+
+</details>

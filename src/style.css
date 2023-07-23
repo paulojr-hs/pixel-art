@@ -25,7 +25,7 @@ main {
 
 #color-palette {
   display: flex;
-  width: 100vw;
+  width: 50vw;
   flex-flow: row wrap;
   align-items: center;
   justify-content: center;
@@ -49,6 +49,21 @@ main {
   width: 45px;
   height: 45px;
   margin: 0 5px;
+}
+
+#board-control h2 {
+  width: 100%;
+  margin: 10px;
+  color: white;
+  text-align: center;
+}
+
+#board-control {
+  display: flex;
+  width: 50vw;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 #pixel-board {
