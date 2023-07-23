@@ -91,3 +91,19 @@ usuários podem expressar sua criatividade através da criação de imagens pixe
 - O quadro está posicionado abaixo da paleta de cores;
 
 </details>
+
+
+## 6. Implementado uma função para selecionar uma cor na paleta de cores.
+
+<details>
+  <summary>A cor clicada deve ser selecionada para posteriormente ser utilizada para preencher os quadros</summary>
+
+- A cor clicada recebe a `class` denominada `selected`;
+
+- Somente **uma** das cores da paleta pode ter a classe `selected` de cada vez;
+
+- Os elementos que recebem a classe `selected` são os mesmos elementos que possuem a classe `color`, como informado na **implementação 2**;
+
+- Sempre ao carregar a página, a **primeira** cor da paleta virá selecionada;
+
+</details>

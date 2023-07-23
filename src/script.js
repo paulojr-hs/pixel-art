@@ -1,3 +1,10 @@
+function selectColor(event) {
+  const selectedColor = document.querySelector('.color.selected');
+  if (selectedColor) selectedColor.classList.remove('selected');
+  const clickedColor = event.target;
+  clickedColor.classList.add('selected');
+}
+
 function populateColorPalette() {
   const palette = document.getElementById('colors');
 
@@ -7,8 +14,11 @@ function populateColorPalette() {
     const color = document.createElement('div');
     color.classList.add('color');
     color.style.backgroundColor = colors[i];
+    color.addEventListener('click', selectColor);
     palette.appendChild(color);
   }
+  const firstColor = palette.querySelector('.color');
+  firstColor.classList.add('selected');
 }
 
 function populatePixelBoard(size) {
@@ -54,6 +64,7 @@ function customColor() {
     const chosenColor = colorInput.value;
     const newColor = document.createElement('div');
     newColor.classList.add('color');
+    newColor.addEventListener('click', selectColor);
     newColor.style.backgroundColor = chosenColor;
     palette.appendChild(newColor);
   }

@@ -45,6 +45,12 @@ main {
   cursor: pointer;
 }
 
+.selected {
+  width: 45px;
+  height: 45px;
+  margin: 0 5px;
+}
+
 #pixel-board {
   display: grid;
   margin: 40px;
