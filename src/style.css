@@ -85,9 +85,21 @@ main {
 }
 
 .pixel {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.with-border {
   width: 42px;
   height: 42px;
-  cursor: pointer;
+  border: solid 1px black;
+}
+
+.borderless {
+  width: 40px;
+  height: 40px;
+  border: none;
 }
 
 button, label, input {

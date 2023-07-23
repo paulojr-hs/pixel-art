@@ -137,7 +137,7 @@ usuários podem expressar sua criatividade através da criação de imagens pixe
 ## 9. Criado um input que permite definir um novo tamanho para o quadro de pixels.
 
 <details>
-  <summary>A página contém um input para definir o tamanho do quadro de pixels</summary></br>
+  <summary>No controle do quadro, há um input para definir o tamanho do quadro de pixels</summary></br>
 
 - O input tem o `id` denominado `board-size` e está dentro da `div` chamada `board-control`;
 
@@ -152,5 +152,20 @@ usuários podem expressar sua criatividade através da criação de imagens pixe
 - Se um valor menor que 5 ou maior que 50 for passado, uma mensagem de erro será exibida;
 
 - Após o tamanho do quadro ser alterado, ele será gerado em branco;
+
+</details>
+
+## 10. Adicionado um botão que remove ou adiciona bordas nos pixels do quadro.
+
+<details>
+  <summary>No controle do quadro, há um botão toggle que remove/adiciona bordas ao pixels do quadro</summary><br />
+
+- O botão possui o `id` denominado `border-toggle`;
+
+- O botão possui o texto **Toggle Border**;
+
+- O botão ao ser clicado, remove a classe `with-border` e adiciona a classe `borderless` em cada pixel do quadro, caso a classe `borderless` seja a atual de cada pixel, ela é removida e adicionada a classe `with-border`;
+
+- As propriedades `gridTemplateColumns` e `gridTemplateRows` são alteradas para manter os pixels com 40px de largura e 40px de altura independente de estarem com ou sem bordas.
 
 </details>

@@ -29,7 +29,6 @@ function populateColorPalette() {
 
 function populatePixelBoard(size) {
   const board = document.getElementById('pixel-board');
-
   board.innerHTML = '';
   board.style.gridTemplateColumns = `repeat(${size}, 42px)`;
   board.style.gridTemplateRows = `repeat(${size}, 42px)`;
@@ -38,7 +37,7 @@ function populatePixelBoard(size) {
     const pixel = document.createElement('div');
     pixel.style.backgroundColor = 'white';
     pixel.classList.add('pixel');
-    pixel.style.border = 'solid 1px black';
+    pixel.classList.add('with-border');
     pixel.addEventListener('click', paintPixel);
     board.appendChild(pixel);
   }
@@ -94,6 +93,26 @@ function customBoardSize() {
     boardSizeInput.value = '';
   }
 }
+
+function toggleBorder() {
+  const pixels = document.querySelectorAll('.pixel');
+  const board = document.getElementById('pixel-board');
+
+  const boardSize = Math.sqrt(pixels.length);
+
+  pixels.forEach((pixel) => {
+    pixel.classList.toggle('with-border');
+    pixel.classList.toggle('borderless');
+  });
+
+  const gridSize = board.style.gridTemplateColumns === `repeat(${boardSize}, 42px)` ? 40 : 42;
+
+  board.style.gridTemplateColumns = `repeat(${boardSize}, ${gridSize}px)`;
+  board.style.gridTemplateRows = `repeat(${boardSize}, ${gridSize}px)`;
+}
+
+const borderControlButton = document.getElementById('border-toggle');
+borderControlButton.addEventListener('click', toggleBorder);
 
 const buttonRandomColor = document.getElementById('button-random-color');
 buttonRandomColor.addEventListener('click', randomizeColors);
