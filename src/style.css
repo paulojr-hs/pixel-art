@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  background-color: #242632;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+#color-palette h2 {
+  width: 100%;
+  margin: 10px;
+  color: white;
+  text-align: center;
+}
+
+#color-palette {
+  display: flex;
+  width: 50vw;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+#colors {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.color {
+  width: 40px;
+  height: 40px;
+  border: solid 1px black;
+  cursor: pointer;
+}
+
+.selected {
+  width: 45px;
+  height: 45px;
+  margin: 0 5px;
+}
+
+#board-control h2 {
+  width: 100%;
+  margin: 10px;
+  color: white;
+  text-align: center;
+}
+
+#board-control {
+  display: flex;
+  width: 50vw;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+#board-size-input {
+  appearance: textfield;
+  cursor: text;
+}
+
+#error-message {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  color: red;
+  font-weight: bold;
+}
+
+#pixel-board {
+  display: grid;
+  margin: 40px;
+}
+
+.pixel {
+  cursor: pointer;
+}
+
+.with-border {
+  width: 42px;
+  height: 42px;
+  border: solid 1px black;
+}
+
+.borderless {
+  width: 40px;
+  height: 40px;
+  border: none;
+}
+
+button, label, input {
+  display: flex;
+  height: 29.5px;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+  background-color: #e9e9ed;
+  box-shadow: none;
+  color: black;
+  cursor: pointer;
+  font-weight: 400;
+  outline: none;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#input-custom-color {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  opacity: 0;
+}
