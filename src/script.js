@@ -81,18 +81,15 @@ function customColor() {
 
 function customBoardSize() {
   const boardSizeInput = document.getElementById('board-size-input');
+  const errorMessage = document.getElementById('error-message');
   const inputValue = boardSizeInput.value.trim();
 
-  let boardSize = parseInt(inputValue, 10);
+  const boardSize = parseInt(inputValue, 10);
 
   if (!inputValue || Number.isNaN(boardSize) || boardSize < 5 || boardSize > 50) {
-    const errorMessageElement = document.getElementById('error-message');
-    errorMessageElement.textContent = 'Valor inválido! O tamanho deve ser um número entre 5 e 50.';
+    errorMessage.textContent = 'Valor inválido! O tamanho deve ser um número entre 5 e 50.';
   } else {
-    const errorMessageElement = document.getElementById('error-message');
-    errorMessageElement.textContent = '';
-
-    boardSize = Math.min(Math.max(boardSize, 5), 50);
+    errorMessage.textContent = '';
     populatePixelBoard(boardSize);
     boardSizeInput.value = '';
   }
