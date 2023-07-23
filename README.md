@@ -107,3 +107,16 @@ usuários podem expressar sua criatividade através da criação de imagens pixe
 - Sempre ao carregar a página, a **primeira** cor da paleta virá selecionada;
 
 </details>
+
+## 7. Criado uma função para preencher um pixel do quadro com a cor selecionada da paleta.
+
+<details>
+  <summary>O pixel do quadro clicado tem sua cor alterada para a cor selecionada na paleta de cores</summary><br />
+
+- Ao carregar a página deve ser possível pintar os pixels do quadro de preto;
+
+- Após selecionar outra cor na paleta de cores, é possível pintar os pixels do quadro com essa cor;
+
+- Somente o pixel que foi clicado deve tem sua cor alterada, sem influenciar na cor dos demais pixels.
+
+</details>

@@ -5,6 +5,12 @@ function selectColor(event) {
   clickedColor.classList.add('selected');
 }
 
+function paintPixel(event) {
+  const selectedColor = document.querySelector('.color.selected');
+  const pixel = event.target;
+  pixel.style.backgroundColor = selectedColor.style.backgroundColor;
+}
+
 function populateColorPalette() {
   const palette = document.getElementById('colors');
 
@@ -33,6 +39,7 @@ function populatePixelBoard(size) {
     pixel.style.backgroundColor = 'white';
     pixel.classList.add('pixel');
     pixel.style.border = 'solid 1px black';
+    pixel.addEventListener('click', paintPixel);
     board.appendChild(pixel);
   }
 }
