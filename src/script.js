@@ -7,14 +7,19 @@ function selectColor(event) {
 
 function paintPixel(event) {
   const selectedColor = document.querySelector('.color.selected');
+  const pixels = document.getElementsByClassName('pixel');
   const pixel = event.target;
   pixel.style.backgroundColor = selectedColor.style.backgroundColor;
+  const pixelColors = Array.from(pixels).map((p) => p.style.backgroundColor);
+  localStorage.setItem('pixelBoard', JSON.stringify(pixelColors));
 }
 
 function populateColorPalette() {
   const palette = document.getElementById('colors');
+  const savedPalette = localStorage.getItem('colorPalette');
 
-  const colors = ['black', 'white', 'red', 'green', 'blue'];
+  const colors = savedPalette ? JSON.parse(savedPalette)
+    : ['black', 'white', 'red', 'green', 'blue'];
 
   for (let i = 0; i < colors.length; i += 1) {
     const color = document.createElement('div');
@@ -29,13 +34,16 @@ function populateColorPalette() {
 
 function populatePixelBoard(size) {
   const board = document.getElementById('pixel-board');
+  const savedPixelColors = localStorage.getItem('pixelBoard');
+  const pixelColors = savedPixelColors ? JSON.parse(savedPixelColors) : [];
+
   board.innerHTML = '';
   board.style.gridTemplateColumns = `repeat(${size}, 42px)`;
   board.style.gridTemplateRows = `repeat(${size}, 42px)`;
 
   for (let i = 0; i < size * size; i += 1) {
     const pixel = document.createElement('div');
-    pixel.style.backgroundColor = 'white';
+    pixel.style.backgroundColor = pixelColors[i] || 'white';
     pixel.classList.add('pixel');
     pixel.classList.add('with-border');
     pixel.addEventListener('click', paintPixel);
@@ -60,11 +68,14 @@ function randomizeColors() {
     if (i === 1) newColor = 'white';
     colors[i].style.backgroundColor = newColor;
   }
+  const savedColors = Array.from(colors).map((color) => color.style.backgroundColor);
+  localStorage.setItem('colorPalette', JSON.stringify(savedColors));
 }
 
 function customColor() {
   const colorInput = document.getElementById('input-custom-color');
   const palette = document.getElementById('colors');
+  const colors = document.getElementsByClassName('color');
 
   function handleColorInput() {
     const chosenColor = colorInput.value;
@@ -73,6 +84,8 @@ function customColor() {
     newColor.addEventListener('click', selectColor);
     newColor.style.backgroundColor = chosenColor;
     palette.appendChild(newColor);
+    const savedColors = Array.from(colors).map((color) => color.style.backgroundColor);
+    localStorage.setItem('colorPalette', JSON.stringify(savedColors));
   }
 
   colorInput.addEventListener('input', handleColorInput);
@@ -90,6 +103,7 @@ function customBoardSize() {
   } else {
     errorMessage.textContent = '';
     populatePixelBoard(boardSize);
+    localStorage.setItem('boardSize', boardSize);
     boardSizeInput.value = '';
   }
 }
@@ -123,7 +137,15 @@ boardSizeInput.addEventListener('keypress', (event) => {
 });
 
 window.addEventListener('load', () => {
-  populateColorPalette();
   customColor();
-  populatePixelBoard(5);
+  populateColorPalette();
+  const savedBoardSize = localStorage.getItem('boardSize');
+
+  if (savedBoardSize) {
+    populatePixelBoard(parseInt(savedBoardSize, 10));
+    boardSizeInput.value = savedBoardSize;
+  } else {
+    populatePixelBoard(5);
+  }
+  boardSizeInput.value = '';
 });

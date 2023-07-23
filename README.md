@@ -27,7 +27,7 @@ usuários podem expressar sua criatividade através da criação de imagens pixe
 ## 2. Implementado uma paleta contendo cinco cores distintas.
 
 <details>
-  <summary>A página inicialmente contém uma paleta com cinco opções de cores</summary>
+  <summary>A página inicialmente contém uma paleta com cinco opções de cores</summary><br />
 
 - A paleta de cores é um elemento com `id` denominado `colors`, e cada cor individual tem a `classe` chamada `color`;
 
@@ -92,11 +92,10 @@ usuários podem expressar sua criatividade através da criação de imagens pixe
 
 </details>
 
-
 ## 6. Implementado uma função para selecionar uma cor na paleta de cores.
 
 <details>
-  <summary>A cor clicada deve ser selecionada para posteriormente ser utilizada para preencher os quadros</summary>
+  <summary>A cor clicada deve ser selecionada para posteriormente ser utilizada para preencher os quadros</summary><br />
 
 - A cor clicada recebe a `class` denominada `selected`;
 
@@ -137,13 +136,13 @@ usuários podem expressar sua criatividade através da criação de imagens pixe
 ## 9. Criado um input que permite definir um novo tamanho para o quadro de pixels.
 
 <details>
-  <summary>No controle do quadro, há um input para definir o tamanho do quadro de pixels</summary></br>
+  <summary>No controle do quadro, há um input para definir o tamanho do quadro de pixels</summary><br />
 
 - O input tem o `id` denominado `board-size` e está dentro da `div` chamada `board-control`;
 
 - Ao ser passado um valor, o quadro é alterado para **N** pixels de largura e **N** pixels de altura, onde **N** é o número inserido no input. Ou seja, ao ser passado o numero **10** será formado um novo quadro 10x10;
 
-- O valor mínimo do quadro é 5x5 e o valor maximo é 50x50;
+- O valor mínimo do quadro é 5x5 e o valor máximo é 50x50;
 
 - Se nenhum valor for passado ao input, uma mensagem de erro será exibida;
 
@@ -167,5 +166,24 @@ usuários podem expressar sua criatividade através da criação de imagens pixe
 - O botão ao ser clicado, remove a classe `with-border` e adiciona a classe `borderless` em cada pixel do quadro, caso a classe `borderless` seja a atual de cada pixel, ela é removida e adicionada a classe `with-border`;
 
 - As propriedades `gridTemplateColumns` e `gridTemplateRows` são alteradas para manter os pixels com 40px de largura e 40px de altura independente de estarem com ou sem bordas.
+
+</details>
+
+## 11. Implementado localStorage para a página.
+
+<details>
+  <summary>Informações importantes são salvas no localStorage</summary><br />
+
+- A paleta de cores atual é salva no localStorage com a chave `colorPalette`;
+
+- As cores adicionadas pelo usuário ou/e randomizadas, devem ser mantidas ao recarregar a página;
+
+- Os pixels pintados são salvos no localStorage com a chave `pixelBoard`;
+
+- O quadro é preenchido com as mesmas cores utilizadas anteriormente, nas posições corretas ao recarregar a página;
+
+- O tamanho do quadro é salvo no localStorage com a chave `boardSize`;
+
+- O quadro mantém seu tamanho ao recarregar a página;
 
 </details>
