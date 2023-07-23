@@ -125,6 +125,19 @@ function toggleBorder() {
   board.style.gridTemplateRows = `repeat(${boardSize}, ${gridSize}px)`;
 }
 
+function clearBoard() {
+  const pixels = document.getElementsByClassName('pixel');
+  for (let i = 0; i < pixels.length; i += 1) {
+    const pixel = pixels[i];
+    pixel.style.backgroundColor = 'white';
+  }
+  localStorage.removeItem('pixelBoard');
+  populatePixelBoard(5);
+  localStorage.removeItem('boardSize');
+}
+
+// --------- BUTTONS --------- //
+
 const borderControlButton = document.getElementById('border-toggle');
 borderControlButton.addEventListener('click', toggleBorder);
 
@@ -135,6 +148,11 @@ const boardSizeInput = document.getElementById('board-size-input');
 boardSizeInput.addEventListener('keypress', (event) => {
   if (event.key === 'Enter') customBoardSize();
 });
+
+const clearButton = document.getElementById('clear-board');
+clearButton.addEventListener('click', clearBoard);
+
+// --------- // --------- //
 
 window.addEventListener('load', () => {
   customColor();

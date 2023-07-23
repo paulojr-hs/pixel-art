@@ -187,3 +187,22 @@ usuários podem expressar sua criatividade através da criação de imagens pixe
 - O quadro mantém seu tamanho ao recarregar a página;
 
 </details>
+
+## 12. Adicionado um botão que limpa o quadro.
+
+<details>
+  <summary>A página possui um botão que ao ser clicado, deixe todos os pixels do quadro com a cor branca</summary><br />
+
+- O botão possui o `id` denominado `clear-board`;
+
+- O botão está dentro da div `board-control`;
+
+- O botão possui o texto **Clear**;
+
+- O botão ao ser clicado, deixa todos os pixels do quadro na cor branca;
+
+- O botão ao ser clicado, volta o tamanho do quadro para 5x5;
+
+</details>
+
+---
