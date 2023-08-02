@@ -11,7 +11,7 @@ usuários podem expressar sua criatividade através da criação de imagens pixe
 
 ## Funcionalidades Implementadas
 
-## 1. Adicionado à página a sessão de Paletas de Cores.
+## Adicionado à página a sessão de Paletas de Cores.
 
 <details>
   <summary>A página contém o uma sessão para manipular as cores</summary><br />
@@ -24,7 +24,7 @@ usuários podem expressar sua criatividade através da criação de imagens pixe
 
 </details>
 
-## 2. Implementado uma paleta contendo cinco cores distintas.
+## Implementado uma paleta contendo cinco cores distintas.
 
 <details>
   <summary>A página inicialmente contém uma paleta com cinco opções de cores</summary><br />
@@ -41,7 +41,7 @@ usuários podem expressar sua criatividade através da criação de imagens pixe
 
 </details>
 
-## 3. Implementado um botão para gerar cores aleatórias para a paleta de cores.
+## Implementado um botão para gerar cores aleatórias para a paleta de cores.
 
 <details>
   <summary>A página possui um botão que gera cores aleatórias ao ser clicado</summary><br />
@@ -58,7 +58,7 @@ usuários podem expressar sua criatividade através da criação de imagens pixe
 
 </details>
 
-## 4. Implementado um input para inserir novas cores a paleta de cores.
+## Implementado um input para inserir novas cores a paleta de cores.
 
 <details>
   <summary>A página possui um seletor que permite inserir novas cores a paleta</summary><br />
@@ -73,7 +73,7 @@ usuários podem expressar sua criatividade através da criação de imagens pixe
 
 </details>
 
-## 5. Adicionado à página um quadro contendo 25 pixels.
+## Adicionado à página um quadro contendo 25 pixels.
 
 <details>
   <summary>A página contém um quadro de pixels 5x5</summary><br/>
@@ -92,7 +92,7 @@ usuários podem expressar sua criatividade através da criação de imagens pixe
 
 </details>
 
-## 6. Implementado uma função para selecionar uma cor na paleta de cores.
+## Implementado uma função para selecionar uma cor na paleta de cores.
 
 <details>
   <summary>A cor clicada deve ser selecionada para posteriormente ser utilizada para preencher os quadros</summary><br />
@@ -107,7 +107,7 @@ usuários podem expressar sua criatividade através da criação de imagens pixe
 
 </details>
 
-## 7. Criado uma função para preencher um pixel do quadro com a cor selecionada da paleta.
+## Criado uma função para preencher um pixel do quadro com a cor selecionada da paleta.
 
 <details>
   <summary>O pixel do quadro clicado tem sua cor alterada para a cor selecionada na paleta de cores</summary><br />
@@ -120,7 +120,7 @@ usuários podem expressar sua criatividade através da criação de imagens pixe
 
 </details>
 
-## 8. Adicionado à página a sessão de Controle do Quadro.
+## Adicionado à página a sessão de Controle do Quadro.
 
 <details>
   <summary>A página contém o uma sessão para manipular o quadro</summary><br />
@@ -133,7 +133,7 @@ usuários podem expressar sua criatividade através da criação de imagens pixe
 
 </details>
 
-## 9. Criado um input que permite definir um novo tamanho para o quadro de pixels.
+## Criado um input que permite definir um novo tamanho para o quadro de pixels.
 
 <details>
   <summary>No controle do quadro, há um input para definir o tamanho do quadro de pixels</summary><br />
@@ -154,7 +154,7 @@ usuários podem expressar sua criatividade através da criação de imagens pixe
 
 </details>
 
-## 10. Adicionado um botão que remove ou adiciona bordas nos pixels do quadro.
+## Adicionado um botão que remove ou adiciona bordas nos pixels do quadro.
 
 <details>
   <summary>No controle do quadro, há um botão toggle que remove/adiciona bordas ao pixels do quadro</summary><br />
@@ -169,7 +169,7 @@ usuários podem expressar sua criatividade através da criação de imagens pixe
 
 </details>
 
-## 11. Implementado localStorage para a página.
+## Implementado localStorage para a página.
 
 <details>
   <summary>Informações importantes são salvas no localStorage</summary><br />
@@ -188,7 +188,7 @@ usuários podem expressar sua criatividade através da criação de imagens pixe
 
 </details>
 
-## 12. Adicionado um botão que limpa o quadro.
+## Adicionado um botão que limpa o quadro.
 
 <details>
   <summary>A página possui um botão que ao ser clicado, deixe todos os pixels do quadro com a cor branca</summary><br />
