@@ -9,21 +9,22 @@
 <body>
   <main>
 
-    <div id="color-palette">
-      <h2 id="palette-title">Color Palette</h2>
-      <button id="button-random-color">Random Colors</button>
-      <label for="input-custom-color">Select New Color</label>
-      <input type="color" id="input-custom-color" name="input-custom-color">
-      <div id="colors"></div>
+    <div id="controls">
+      <div id="color-palette">
+        <button id="button-random-color"><img src="./assets/random.png" alt="Random Colors"></button>
+        <label for="input-custom-color"><img src="./assets/palette-board.png" alt="Palette of Colors"></label>
+        <input type="color" id="input-custom-color" name="input-custom-color">
+        <div id="colors"></div>
+      </div>
+
+      <div id="board-control">
+        <input type="number" id="board-size-input" min="1" placeholder="Board Size">
+        <button id="border-toggle"><img src="./assets/borderless.png" alt="Border Toggle"></button>
+        <button id="clear-board" aria-label="Clear Board"><img src="./assets/clear.png" alt="Clear"></button>
+      </div>
     </div>
 
-    <div id="board-control">
-      <h2 id="section-title">Board Control</h2>
-      <button id="border-toggle">Toggle Border</button>
-      <input type="number" id="board-size-input" min="1" placeholder="Custom Board Size">
-      <button id="clear-board" aria-label="Clear Board">Clear</button>
-      <div id="error-message"></div>
-    </div>
+    <div id="error-message" style="display: none;"></div>
     <div id="pixel-board"></div>
   </main>
 

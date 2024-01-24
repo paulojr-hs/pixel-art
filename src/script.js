@@ -100,8 +100,10 @@ function customBoardSize() {
 
   if (!inputValue || Number.isNaN(boardSize) || boardSize < 5 || boardSize > 50) {
     errorMessage.textContent = 'Valor inválido! O tamanho deve ser um número entre 5 e 50.';
+    errorMessage.style.display = 'flex'
   } else {
     errorMessage.textContent = '';
+    errorMessage.style.display = 'none'
     populatePixelBoard(boardSize);
     localStorage.setItem('boardSize', boardSize);
     boardSizeInput.value = '';
@@ -111,6 +113,7 @@ function customBoardSize() {
 function toggleBorder() {
   const pixels = document.querySelectorAll('.pixel');
   const board = document.getElementById('pixel-board');
+  const borderToggleBtn = document.getElementById('border-toggle');
 
   const boardSize = Math.sqrt(pixels.length);
 
@@ -123,6 +126,13 @@ function toggleBorder() {
 
   board.style.gridTemplateColumns = `repeat(${boardSize}, ${gridSize}px)`;
   board.style.gridTemplateRows = `repeat(${boardSize}, ${gridSize}px)`;
+
+  const imgTag = borderToggleBtn.querySelector('img');
+  if (imgTag.src.includes('borderless.png')) {
+    imgTag.src = './assets/border.png';
+  } else {
+    imgTag.src = './assets/borderless.png';
+  }
 }
 
 function clearBoard() {
@@ -135,8 +145,6 @@ function clearBoard() {
   populatePixelBoard(5);
   localStorage.removeItem('boardSize');
 }
-
-// --------- BUTTONS --------- //
 
 const borderControlButton = document.getElementById('border-toggle');
 borderControlButton.addEventListener('click', toggleBorder);
@@ -151,8 +159,6 @@ boardSizeInput.addEventListener('keypress', (event) => {
 
 const clearButton = document.getElementById('clear-board');
 clearButton.addEventListener('click', clearBoard);
-
-// --------- // --------- //
 
 window.addEventListener('load', () => {
   customColor();

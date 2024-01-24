@@ -16,23 +16,27 @@ main {
   justify-content: center;
 }
 
-#color-palette h2 {
+#controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  margin: 10px;
-  color: white;
-  text-align: center;
 }
 
 #color-palette {
   display: flex;
-  width: 50vw;
+  width: 100%;
+  min-height: 173px;
   flex-flow: row wrap;
   align-items: center;
   justify-content: center;
+  padding: 8px;
+  margin: 10px;
 }
 
 #colors {
   display: flex;
+  width: 100%;
   flex-flow: row wrap;
   align-items: center;
   justify-content: center;
@@ -51,29 +55,27 @@ main {
   margin: 0 5px;
 }
 
-#board-control h2 {
-  width: 100%;
-  margin: 10px;
-  color: white;
-  text-align: center;
-}
-
 #board-control {
   display: flex;
-  width: 50vw;
   flex-flow: row wrap;
+  width: 100%;
+  min-height: 173px;
   align-items: center;
   justify-content: center;
+  padding: 8px;
+  margin: 10px;
 }
 
 #board-size-input {
   appearance: textfield;
+  max-width: 120px;
   cursor: text;
 }
 
 #error-message {
-  display: flex;
-  width: 100vw;
+  width: 100%;
+  text-align: center;
+  align-items: center;
   justify-content: center;
   color: red;
   font-weight: bold;
@@ -100,16 +102,22 @@ main {
   border: none;
 }
 
+img {
+  height: 36px;
+}
+
+button, label {
+  background-color: rgba(255, 255, 255, 10%);
+}
+
 button, label, input {
   display: flex;
-  height: 29.5px;
   align-items: center;
   justify-content: center;
-  padding: 5px;
+  padding: 8px;
   border: none;
   border-radius: 5px;
   margin: 10px;
-  background-color: #e9e9ed;
   box-shadow: none;
   color: black;
   cursor: pointer;
