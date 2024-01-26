@@ -6,7 +6,7 @@
 
 [pixel-art.vercel](https://paulo-pixel-art.vercel.app/)
 
-![Preview of Lessons Learned Project](./pixel-art.png)
+![Preview of Pixel Art Project](./pixel-art.png)
 
 ## About
 
